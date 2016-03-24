@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-TW" ng-controller="MainCtrl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title ng-bind="pageTitle"></title>
+        <link rel="stylesheet" href="app.css">
+     </head>
+    <body>
+        <h1>My Angular</h1>
+        <div ui-view></div>
+
+        <script src="jspm_packages/system.js"></script>
+        <script src="config.js"></script>
+        <script>
+          System.import('boot.js');
+        </script>
+    </body>
+</html>
