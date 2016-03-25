@@ -2,12 +2,22 @@ import angular from 'angular';
 import 'angular-ui-router';
 
 import MainCtrl from './main.controller';
+import home from 'modules/home/home.module';
 
-let module = angular.module('Main', ['ui.router'])
+const main = angular
+  .module('Main', [
+    home.name,
+    'ui.router'
+  ])
+
   .config(function ($urlRouterProvider) {
     $urlRouterProvider.otherwise('/home');
   })
 
   .controller('MainCtrl', MainCtrl);
 
-export default module;
+// export default main;
+
+angular.element(document).ready(function () {
+  angular.bootstrap(document, [main.name]);
+});
