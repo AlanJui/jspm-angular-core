@@ -10,15 +10,27 @@ export default angular
     $stateProvider
       .state('home', {
         url: '/home',
-        views: {
-          controller: 'HomeCtrl',
-          controllerAs: 'vm',
-          templateUrl: 'modules/home/home.tpl.html'
-        },
+        controller: 'HomeCtrl',
+        controllerAs: 'vm',
+        templateUrl: 'modules/home/home.tpl.html',
         data: {
           pageTitle: 'Home'
         }
       });
   })
+  // .config(function ($stateProvider) {
+  //   $stateProvider
+  //     .state('home', {
+  //       url: '/home',
+  //       views: {
+  //         controller: 'HomeCtrl',
+  //         controllerAs: 'vm',
+  //         templateUrl: 'modules/home/home.tpl.html'
+  //       },
+  //       data: {
+  //         pageTitle: 'Home'
+  //       }
+  //     });
+  // })
 
   .controller('HomeCtrl', HomeCtrl);

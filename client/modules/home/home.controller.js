@@ -1,7 +1,7 @@
 export default class HomeCtrl {
 
   constructor() {
-    this.title = 'Testing home.controller.js';
+    this.title = 'My test for home.controller.js';
   }
 
 }

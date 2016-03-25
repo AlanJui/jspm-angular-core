@@ -16,7 +16,7 @@ const main = angular
 
   .controller('MainCtrl', MainCtrl);
 
-// export default main;
+export default main;
 
 angular.element(document).ready(function () {
   angular.bootstrap(document, [main.name]);
