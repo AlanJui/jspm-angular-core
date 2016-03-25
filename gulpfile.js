@@ -1,8 +1,8 @@
 'use strict';
 
 var gulp = require('gulp'),
-    wrench = require('wrench');
-    
+  wrench = require('wrench');
+
 wrench
   .readdirSyncRecursive('./gulp-tasks')
   .filter(function (file) {
@@ -11,5 +11,5 @@ wrench
   .map(function (file) {
     require('./gulp-tasks/' + file);
   });
-  
-gulp.task('default', ['serve']);  
+
+gulp.task('default', ['serve']);

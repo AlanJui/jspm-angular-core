@@ -18,19 +18,5 @@ export default angular
         }
       });
   })
-  // .config(function ($stateProvider) {
-  //   $stateProvider
-  //     .state('home', {
-  //       url: '/home',
-  //       views: {
-  //         controller: 'HomeCtrl',
-  //         controllerAs: 'vm',
-  //         templateUrl: 'modules/home/home.tpl.html'
-  //       },
-  //       data: {
-  //         pageTitle: 'Home'
-  //       }
-  //     });
-  // })
 
   .controller('HomeCtrl', HomeCtrl);
