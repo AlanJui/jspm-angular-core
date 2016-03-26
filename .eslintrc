@@ -3,7 +3,8 @@
         "browser": true,
         "es6": true,
         "node": true,
-        "jasmine": true
+        "jasmine": true,
+        "protractor": true
     },
 
     "extends": "eslint:recommended",
@@ -19,27 +20,23 @@
         "jasmine"
     ],
 
+    // "off" or 0 - turn the rule off
+    // "warn" or 1 - turn the rule on as a warning (doesn’t affect exit code)
+    // "error" or 2 - turn the rule on as an error (exit code is 1 when triggered)
+
     "rules": {
-        "indent": [
-            "error",
-            2
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
+        "indent": [2, 2 ],
+
+        "jasmine/missing-expect": [2, "expect()"],
+
+        "linebreak-style": [2, "unix"],
+
         "no-console": 0,
-        "semi": [
-            "error",
-            "always"
-        ],
-        "jasmine/missing-expect": [
-            "error",
-            "expect()"
-        ]
+
+        "no-unused-vars": 0,
+
+        "quotes": [2, "single"],
+
+        "semi": [2, "always"]
     }
 }

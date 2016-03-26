@@ -1,4 +1,5 @@
 node_modules/
+npm-debug.log
 client/jspm_packages/
 client/modules/html-templates/
 coverage/

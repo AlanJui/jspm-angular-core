@@ -32,16 +32,16 @@ gulp.task('browser-sync',
 
 gulp.task('nodemon',
   [
-    'ng-template',
+    'eslint',
     'less',
-    'eslint'
+    'ng-template'
   ],
   function (done) {
     var running = false;
 
     return nodemon({
       script: 'server/app.js',
-      watch: ['server/**/*.*']
+      watch: ['server/**/*.js']
     })
     .on('start', function () {
       if (!running) {
