@@ -2,12 +2,15 @@ import angular from 'angular';
 import 'angular-ui-router';
 
 import 'app.css!';
-import MainCtrl from './main.controller';
-import home from 'modules/home/home.module';
+// import 'modules/html-templates/html-templates.module';
 
-const main = angular
+import MainCtrl from './main.controller';
+import Home from 'modules/home/home.module';
+
+const MAIN = angular
   .module('Main', [
-    home.name,
+    // 'HTMLTemplates',
+    Home.name,
     'ui.router'
   ])
 
@@ -17,8 +20,8 @@ const main = angular
 
   .controller('MainCtrl', MainCtrl);
 
-export default main;
+// export default MAIN;
 
 angular.element(document).ready(function () {
-  angular.bootstrap(document, [main.name]);
+  angular.bootstrap(document, [MAIN.name]);
 });

@@ -10,10 +10,10 @@ gulp.task('serve',
     'browser-sync'
   ],
   function () {
-    gulp.watch('client/**/*.js', ['eslint']).on('change', reload);
-    gulp.watch('client/app.css').on('change', reload);
+    gulp.watch('client/**/*.tpl.html', ['ng-template']);
     gulp.watch('client/**/*.less', ['less']);
-    gulp.watch('**/*.tpl.html').on('change', reload);
+    gulp.watch('client/app.css').on('change', reload);
+    gulp.watch('client/**/*.js', ['eslint']).on('change', reload);
   }
 );
 
@@ -32,8 +32,9 @@ gulp.task('browser-sync',
 
 gulp.task('nodemon',
   [
-    'eslint',
-    'less'
+    'ng-template',
+    'less',
+    'eslint'
   ],
   function (done) {
     var running = false;

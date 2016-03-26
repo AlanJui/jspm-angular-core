@@ -6,6 +6,7 @@ var gulp = require('gulp'),
 gulp.task('eslint', function () {
   return gulp.src([
     '**/*.js',
+    '!client/modules/html-templates/html-templates.module.js',
     '!client/config.js',
     '!client/jspm_packages{,/**}',
     '!node_modules{,/**}'

@@ -1,10 +1,15 @@
 import angular from 'angular';
 import 'angular-ui-router';
 
+import 'modules/html-templates/html-templates.module';
+
 import HomeCtrl from './home.controller';
 
 export default angular
-  .module('Home', ['ui.router'])
+  .module('Home', [
+    'HTMLTemplates',
+    'ui.router'
+  ])
 
   .config(function ($stateProvider) {
     $stateProvider
@@ -12,7 +17,10 @@ export default angular
         url: '/home',
         controller: 'HomeCtrl',
         controllerAs: 'vm',
-        templateUrl: 'modules/home/home.tpl.html',
+        // templateUrl: 'modules/home/home.tpl.html',
+        templateProvider: function ($templateCache) {
+          return $templateCache.get('modules/home/home.tpl.html');
+        },
         data: {
           pageTitle: 'Home'
         }
