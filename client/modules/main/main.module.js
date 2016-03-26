@@ -1,6 +1,7 @@
 import angular from 'angular';
 import 'angular-ui-router';
 
+import 'app.css!';
 import MainCtrl from './main.controller';
 import home from 'modules/home/home.module';
 

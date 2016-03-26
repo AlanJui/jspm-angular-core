@@ -11,7 +11,8 @@ gulp.task('serve',
   ],
   function () {
     gulp.watch('client/**/*.js', ['eslint']).on('change', reload);
-    gulp.watch('**/*.css').on('change', reload);
+    gulp.watch('client/app.css').on('change', reload);
+    gulp.watch('client/**/*.less', ['less']);
     gulp.watch('**/*.tpl.html').on('change', reload);
   }
 );
@@ -31,7 +32,8 @@ gulp.task('browser-sync',
 
 gulp.task('nodemon',
   [
-    'eslint'
+    'eslint',
+    'less'
   ],
   function (done) {
     var running = false;
