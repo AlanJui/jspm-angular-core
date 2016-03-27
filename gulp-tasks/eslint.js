@@ -15,4 +15,3 @@ gulp.task('eslint', function () {
   .pipe(eslint())
   .pipe(eslint.format());
 });
-

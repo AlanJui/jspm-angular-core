@@ -1,5 +1,9 @@
-module.exports = function (config) {
+// Karma configuration
+// Generated on Fri Feb 19 2016 15:10:40 GMT-0500 (EST)
+
+module.exports = function(config) {
   config.set({
+
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
 
@@ -36,6 +40,9 @@ module.exports = function (config) {
 
     // list of files to exclude
     exclude: [],
+
+    // list of files / patterns to load in the browser
+    files: [],
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
